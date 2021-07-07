@@ -9,12 +9,13 @@
     - db_adapter: postgresql
     - rails_env: production
     - environment_config_log_level: :debug
-    - client_server_name: #MY_SERVER.com
-    - client_secret_key_base: #MY_SECRET_KEY_BASE
-    - client_secret_db_password: #MY_SECRET_DB_PASSWORD
+    - client_server_name: siren-api.local.io
+    - client_secret_key_base: A58SQODhKtRrCKn9K00t3ybRH6jys69Z
+    - client_secret_db_password: ds6538DS#
 
   roles:
     - { role: python_install_raw, tags: ['python_raw'] }
+    - { role: deploy_user, tags: deploy_user }
     - { role: nginx, mina_deploy: true, tags: ['nginx'] }
     - { role: rails_app, tags: sirene_rails_app }
     - { role: ruby, tags: ['ruby', 'rbenv'] }
