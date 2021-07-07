@@ -1,6 +1,6 @@
 - name: Install Rbenv
   include_role:
-    name : zzet.rbenv
+    name : deploy_user
   vars:
     rbenv:
       default_ruby: 2.4.2
